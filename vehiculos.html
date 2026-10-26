@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Explore our rental vehicle options in Punta Cana. Compare categories, passenger capacity, and request your rental at PUJ Rent a Car.">
+  <title>Our Rental Vehicles in Punta Cana | PUJ Rent a Car</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/vehiculos.css">
+  <script type="module" src="js/vehiculos.js"></script>
+</head>
+<body>
+  <div class="notice">Preview website • Vehicles, photos and prices are examples to replace with your real fleet.</div>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" aria-label="PUJ Rent a Car home">
+        <img class="brand-image" src="assets/images/logo.png" alt="PUJ Rent a Car" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+        <span class="brand-fallback" hidden><strong>PUJ Rent a Car</strong><small>PUNTA CANA</small></span>
+      </a>
+      <nav class="links" id="fleet-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="vehiculos.html" aria-current="page">Fleet</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <div class="airport-mini"><span>✈</span><div>Punta Cana International Airport<small>Convenient Pickup</small></div></div>
+        <a class="button button-dark" href="index.html#booking-form">Book Now</a>
+      </div>
+      <button class="mobile-menu" id="fleet-menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+  <main>
+    <section class="fleet-hero">
+      <div class="container">
+        <div class="fleet-breadcrumb"><a href="index.html">Home</a> / Our Fleet</div>
+        <span class="eyebrow">PUJ RENT A CAR · PUNTA CANA</span>
+        <h1>Find the perfect car<br>for your trip.</h1>
+        <p>From compact cars to spacious vans. Explore our vehicle options and request the one that fits your adventure.</p>
+        <a href="#vehicle-list" class="button">Explore Vehicles ↓</a>
+      </div>
+    </section>
+    <section id="vehicle-list" class="fleet-listing container">
+      <div class="fleet-heading">
+        <div><span class="kicker">EXPLORE OUR FLEET</span><h2>Available vehicle categories</h2><p>Prices are illustrative until the actual fleet is confirmed.</p></div>
+        <span class="fleet-count" id="fleet-count" aria-live="polite"></span>
+      </div>
+      <div class="fleet-filters" role="group" aria-label="Filter vehicles">
+        <button class="fleet-filter active" data-filter="all" aria-pressed="true">All Vehicles</button>
+        <button class="fleet-filter" data-filter="Economy Car" aria-pressed="false">Economy</button>
+        <button class="fleet-filter" data-filter="SUV" aria-pressed="false">SUV</button>
+        <button class="fleet-filter" data-filter="Van" aria-pressed="false">Vans</button>
+        <button class="fleet-filter" data-filter="Luxury Vehicle" aria-pressed="false">Luxury</button>
+      </div>
+      <div class="vehicle-grid" id="vehicle-grid"></div>
+      <p class="fleet-disclaimer">* Photos, specifications, prices and vehicle availability are examples. Confirm everything with the company before accepting reservations.</p>
+    </section>
+    <section class="fleet-contact"><div class="container fleet-contact-inner"><div><span class="eyebrow">READY TO EXPLORE PUNTA CANA?</span><h2>Choose your car. Enjoy the journey.</h2><p>Tell us your dates and preferred car to begin your rental inquiry.</p></div><a class="button" href="index.html#booking-form">Request a Rental →</a></div></section>
+  </main>
+  <footer class="footer"><div class="container fleet-footer"><strong>PUJ Rent a Car</strong><span>Punta Cana, Dominican Republic</span><a href="index.html">Back to Home →</a><small>© <span id="fleet-year"></span> PUJ Rent a Car</small></div></footer>
+</body>
+</html>

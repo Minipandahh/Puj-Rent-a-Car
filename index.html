@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Explore rental cars in Punta Cana. Choose your vehicle, request pickup at Punta Cana Airport (PUJ), and plan your trip with PUJ Rent a Car." name="description"/>
+  <meta content="#102b51" name="theme-color"/>
+  <title>
+   Car Rental Punta Cana Airport (PUJ) | PUJ Rent a Car
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="css/styles.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="nav">
+   <div class="container nav-inner">
+<a aria-label="PUJ Rent a Car home" class="logo" href="#home">
+    <img
+        src="assets/images/logo.png"
+        alt="PUJ Rent a Car"
+        class="logo-img"
+    >
+</a>
+    <nav aria-label="Primary" class="links" id="nav-links">
+     <a href="#home">
+      Home
+     </a>
+     <a href="vehiculos.html">Vehículos
+     </a>
+     <a href="#services">
+      Services
+     </a>
+     <a href="#about">
+      About
+     </a>
+     <a href="#contact">
+      Contact
+     </a>
+    </nav>
+    <div class="nav-right">
+     <div class="airport-mini">
+      <span>
+       ✈
+      </span>
+      <div>
+       Punta Cana International Airport
+       <small>
+        Convenient Pickup
+       </small>
+      </div>
+     </div>
+     <button class="lang" id="lang-toggle" title="English interface (Spanish coming soon)">
+      🇺🇸 EN
+     </button>
+     <button class="button button-dark" id="header-book">
+      Book Now
+     </button>
+    </div>
+    <button aria-expanded="false" aria-label="Open navigation" class="mobile-menu" id="menu">
+     ☰
+    </button>
+   </div>
+  </header>
+  <main>
+   <section class="hero" id="home">
+    <div class="container hero-content">
+     <span class="eyebrow">
+      WELCOME TO PUNTA CANA
+     </span>
+     <h1>
+      Rent Your Car
+      <br/>
+      in Punta Cana
+     </h1>
+     <p>
+      Airport pickup, great options and an easy rental request for your next adventure.
+     </p>
+     <div class="hero-features">
+      <div>
+       <span>
+        ✈
+       </span>
+       Airport Pickup
+       <br/>
+       at PUJ
+      </div>
+      <div>
+       <span>
+        ◇
+       </span>
+       Clear Rental
+       <br/>
+       Details
+      </div>
+      <div>
+       <span>
+        🚙
+       </span>
+       Modern Vehicle
+       <br/>
+       Options
+      </div>
+     </div>
+    </div>
+    <img alt="SUV rental vehicle" class="hero-car" src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+   </section>
+   <div class="container booking-wrap">
+    <form class="booking" id="booking-form">
+     <div class="field">
+      <label for="pickup">
+       Pickup Location
+      </label>
+      <select id="pickup">
+       <option>
+        Punta Cana Airport (PUJ)
+       </option>
+       <option>
+        B&aacute;varo / Punta Cana
+       </option>
+       <option>
+        Cap Cana
+       </option>
+       <option>
+        Other / Please specify
+       </option>
+      </select>
+     </div>
+     <div class="field">
+      <label for="start">
+       Pickup Date
+      </label>
+      <input id="start" required="" type="date"/>
+     </div>
+     <div class="field">
+      <label for="end">
+       Return Date
+      </label>
+      <input id="end" required="" type="date"/>
+     </div>
+     <div class="field">
+      <label for="type">
+       Car Type
+      </label>
+      <select id="type">
+       <option>
+        All Vehicles
+       </option>
+       <option>
+        Economy Car
+       </option>
+       <option>
+        SUV
+       </option>
+       <option>
+        Van
+       </option>
+       <option>
+        Luxury Vehicle
+       </option>
+      </select>
+     </div>
+     <button class="button" type="submit">
+      Book Now &rarr;
+     </button>
+     <div class="booking-badges">
+      <span>
+       <b>
+        ✈
+       </b>
+       Airport pickup requests
+      </span>
+      <span>
+       <b>
+        ▣
+       </b>
+       Flexible inquiries
+      </span>
+      <span>
+       <b>
+        ♢
+       </b>
+       Clear rental details
+      </span>
+      <span>
+       <b>
+        &clubs;
+       </b>
+       Friendly customer support
+      </span>
+     </div>
+    </form>
+   </div>
+   <section class="section" id="fleet">
+    <div class="container">
+     <div class="section-head">
+      <div>
+       <span class="kicker">
+        OUR FLEET
+       </span>
+       <h2>
+        Choose Your Perfect Ride
+       </h2>
+       <div class="section-sub">
+        Explore vehicles for every kind of traveler.
+       </div>
+      </div>
+      <a class="text-link" href="#fleet">
+       View All Vehicles &rarr;
+      </a>
+     </div>
+     <div class="fleet-grid" id="fleet-grid">
+     </div>
+    </div>
+   </section>
+   <section class="section section-compact" id="services">
+    <div class="container split">
+     <div id="about">
+      <span class="kicker">
+       TRAVEL WITH CONFIDENCE
+      </span>
+      <h2>
+       Your Journey Starts Here
+      </h2>
+      <p class="section-sub intro-copy">
+       Explore Punta Cana at your own pace. Choose a vehicle that fits your trip and submit a simple rental inquiry with your travel dates. We can help you plan pickup at Punta Cana International Airport or another location.
+      </p>
+      <a class="button explore-link" href="#fleet">
+       Explore Our Fleet &rarr;
+      </a>
+     </div>
+     <div>
+      <span class="kicker">
+       OUR ADVANTAGES
+      </span>
+      <h2>
+       Why Choose PUJ Rent a Car?
+      </h2>
+      <div class="benefits-grid">
+       <div class="benefit">
+        <div class="benefit-icon">
+         ✈
+        </div>
+        <div>
+         <h3>
+          Airport Pickup
+         </h3>
+         <p>
+          Ask about convenient pickup at PUJ.
+         </p>
+        </div>
+       </div>
+       <div class="benefit">
+        <div class="benefit-icon">
+         ＄
+        </div>
+        <div>
+         <h3>
+          Rental Options
+         </h3>
+         <p>
+          Find an option that fits your plans.
+         </p>
+        </div>
+       </div>
+       <div class="benefit">
+        <div class="benefit-icon">
+         ▣
+        </div>
+        <div>
+         <h3>
+          Easy Reservation
+         </h3>
+         <p>
+          Send your request in minutes.
+         </p>
+        </div>
+       </div>
+       <div class="benefit">
+        <div class="benefit-icon">
+         ☏
+        </div>
+        <div>
+         <h3>
+          Contact Support
+         </h3>
+         <p>
+          Ask questions before you travel.
+         </p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="reviews">
+    <div class="container">
+     <span class="kicker">
+      YOUR EXPERIENCE MATTERS
+     </span>
+     <h2 class="reviews-title">
+      Travel With Peace of Mind
+     </h2>
+     <p class="section-sub">
+      We&rsquo;ll feature verified customer reviews here once you provide them.
+     </p>
+     <div class="reviews-grid">
+      <div class="review">
+       <div class="stars">
+        &starf;&starf;&starf;&starf;&starf;
+       </div>
+       <p>
+        Client testimonial space. Add feedback from a verified customer after launch.
+       </p>
+       <strong>
+        Customer Review
+       </strong>
+       <small>
+        Pending verification
+       </small>
+      </div>
+      <div class="review">
+       <div class="stars">
+        &starf;&starf;&starf;&starf;&starf;
+       </div>
+       <p>
+        Showcase a real review about vehicle quality and airport pickup.
+       </p>
+       <strong>
+        Customer Review
+       </strong>
+       <small>
+        Pending verification
+       </small>
+      </div>
+      <div class="review">
+       <div class="stars">
+        &starf;&starf;&starf;&starf;&starf;
+       </div>
+       <p>
+        Highlight authentic service feedback to build traveler confidence.
+       </p>
+       <strong>
+        Customer Review
+       </strong>
+       <small>
+        Pending verification
+       </small>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="cta" id="contact">
+    <div class="container cta-inner">
+     <div>
+      <span class="eyebrow">
+       READY FOR YOUR PUNTA CANA ADVENTURE?
+      </span>
+      <h2>
+       Book Your Car Today
+      </h2>
+      <p>
+       Enjoy the freedom to explore the Dominican Republic your way.
+      </p>
+     </div>
+     <div class="cta-right">
+      <button class="button" id="cta-book">
+       Book Now &rarr;
+      </button>
+      <div class="checklist">
+       &checkmark; Airport pickup requests
+       <br/>
+       &checkmark; Vehicle selection
+       <br/>
+       &checkmark; Easy rental inquiries
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="footer">
+   <div class="container">
+    <div class="footer-main">
+     <div>
+      <a class="logo" href="#home">
+       <span class="logo-mark">
+        🌴
+       </span>
+       <span>
+        <strong>
+         PUJ Rent a Car
+        </strong>
+        <small>
+         PUNTA CANA
+        </small>
+       </span>
+      </a>
+      <p>
+       Discover Punta Cana with a rental car that suits your journey.
+      </p>
+     </div>
+     <div>
+      <h4>
+       Quick Links
+      </h4>
+      <p>
+       <a href="#home">
+        Home
+       </a>
+       <br/>
+       <a href="#fleet">
+        Fleet
+       </a>
+       <br/>
+       <a href="#services">
+        Services
+       </a>
+       <br/>
+       <a href="#about">
+        About
+       </a>
+      </p>
+     </div>
+     <div>
+      <h4>
+       Location
+      </h4>
+      <p>
+       Punta Cana, Dominican Republic
+       <br/>
+       Airport pickup requests: PUJ
+      </p>
+     </div>
+     <div>
+      <h4>
+       Get in Touch
+      </h4>
+      <p>
+       Phone and WhatsApp: To be added
+       <br/>
+       Email: To be added
+       <br/>
+       <a href="#home">
+        Make a booking request
+       </a>
+      </p>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <span>
+      &copy;
+      <span id="year">
+      </span>
+      PUJ Rent a Car. All rights reserved.
+     </span>
+     <span>
+      Terms &amp; Conditions &bull; Privacy Policy (add before launch)
+     </span>
+    </div>
+   </div>
+  </footer>
+  <dialog class="dialog" id="request-modal">
+   <div class="dialog-inner">
+    <h2>
+     Request a Reservation
+    </h2>
+    <p>
+     Enter your details. This preview creates a booking inquiry you can copy; it does not send a reservation or charge a card.
+    </p>
+    <form id="request-form">
+     <label for="guest">
+      Full name
+     </label>
+     <input autocomplete="name" id="guest" placeholder="Your full name" required=""/>
+     <label for="contact-detail">
+      Email or phone
+     </label>
+     <input id="contact-detail" placeholder="Email or phone number" required=""/>
+     <label for="additional">
+      Special requests (optional)
+     </label>
+     <input id="additional" placeholder="Flight details, pickup time, etc."/>
+     <div class="dialog-actions">
+      <button class="button button-outline" id="modal-close" type="button">
+       Cancel
+      </button>
+      <button class="button" type="submit">
+       Copy Request &rarr;
+      </button>
+     </div>
+    </form>
+    <p class="small" id="request-summary">
+    </p>
+   </div>
+  </dialog>
+  <div class="toast" id="toast" role="status">
+  </div>
+  <script src="js/app.js" type="module">
+  </script>
+ </body>
+</html>
+
