@@ -278,54 +278,11 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible {
   border-radius:13px;
   padding:23px;
   display:grid;
-  grid-template-columns:1.25fr 1fr 1fr 1.05fr .95fr;
+  grid-template-columns:minmax(0,1.25fr) repeat(3,minmax(0,1fr)) minmax(0,.95fr);
   gap:16px;
   align-items:end;
 }
 
-
-/* ====================================
-   FORMULARIO RESPONSIVE
-==================================== */
-
-/* TABLETS */
-@media (max-width: 1024px) {
-    .booking {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 20px;
-    }
-
-    .booking > * {
-        min-width: 0;
-    }
-}
-
-/* CELULARES */
-@media (max-width: 768px) {
-    .booking {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        gap: 20px;
-        padding: 20px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .booking > * {
-        width: 100%;
-        min-width: 0;
-        max-width: 100%;
-    }
-
-    .booking input,
-    .booking select,
-    .booking button {
-        width: 100%;
-        min-width: 0;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-}
 
 .field label {
   font-size:11px;
@@ -402,7 +359,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible {
 
 .fleet-grid {
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(4,minmax(0,1fr));
   gap:17px;
 }
 
@@ -742,504 +699,182 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible {
   font-size:13px;
 }
 
-@media (max-width: 1150px) {
-.airport-mini {
-  display:none;
-}
 
-.nav-inner {
-  gap:10px;
-}
-
-.links {
-  gap:20px;
-}
-
-.fleet-grid {
-  grid-template-columns:repeat(2,1fr);
-}
-
-.split {
-  grid-template-columns:1fr;
-}
-
-.hero-car {
-  width:55vw;
-  right:0;
-}
-
-.booking {
-  grid-template-columns:repeat(4,1fr);
-}
-
-.booking button {
-  grid-column:1/-1;
-}
-
-}
-
-@media (max-width: 700px) {
-
-.container {
-    width: 95%;
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.nav {
-  height:70px;
-}
-
-.nav-inner {
-  justify-content:space-between;
-}
+/* =========================================================
+   COMPONENTES COMPARTIDOS
+========================================================= */
 
 .logo {
-  min-width:auto;
-}
-
-.logo strong {
-  font-size:18px;
-}
-
-.logo-mark {
-  width:37px;
-  height:37px;
-}
-
-.mobile-menu {
-  display:block;
-}
-
-.links {
-  position:absolute;
-  top:70px;
-  left:0;
-  right:0;
-  padding:20px;
-  background:white;
-  box-shadow:0 14px 20px #1233;
-  display:none;
-  flex-direction:column;
-  align-items:flex-start;
-}
-
-.links.open {
-  display:flex;
-}
-
-.nav-right .lang {
-  display:none;
-}
-
-.nav-right .button {
-  padding:11px 13px;
-  font-size:12px;
-}
-
-.hero {
-  height:560px;
-}
-
-.hero-content {
-  padding-top:48px;
-}
-
-.hero p {
-  font-size:15px;
-}
-
-.hero-features {
-  gap:8px;
-  margin-top:22px;
-}
-
-.hero-features div {
-  font-size:10px;
-  gap:5px;
-  padding-right:8px;
-}
-
-.hero-features span {
-  font-size:17px;
-}
-
-.hero-car {
-  width:100vw;
-  right:-18vw;
-  bottom:25px;
-  opacity:.92;
-}
-
-.booking-wrap {
-  margin-top:-35px;
-}
-
-.booking {
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  padding:15px;
-  gap:12px;
-}
-
-.field:first-child,.booking button {
-  grid-column:1/-1;
-}
-
-.booking-badges {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:8px;
-  font-size:10px;
-}
-
-.section {
-  padding:45px 0;
-}
-
-.section-head {
-  align-items:flex-start;
-  gap:12px;
-}
-
-
-@media (min-width: 1200px) {
-    .fleet-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 24px;
-    }
-}
-
-
-.car-photo {
-  height:125px;
-}
-
-.car-details {
-  padding:12px;
-}
-
-.spec {
-  gap:5px;
-  font-size:10px;
-}
-
-.price-row strong {
-  font-size:16px;
-}
-
-.round-btn {
-  width:30px;
-  height:30px;
-}
-
-.benefits-grid {
-  gap:10px;
-}
-
-.benefit {
-  padding:12px;
-  flex-direction:column;
-}
-
-.reviews-grid {
-  grid-template-columns:1fr;
-}
-
-.review p {
-  min-height:auto;
-}
-
-.cta-inner,.cta-right {
-  flex-direction:column;
-  align-items:flex-start;
-}
-
-.cta h2 {
-  font-size:29px;
-}
-
-.footer-main {
-  grid-template-columns:1fr 1fr;
-}
-
-.footer-bottom {
-  gap:10px;
-  flex-direction:column;
-}
-
-}
-
-@media (max-width: 380px) {
-.fleet-grid {
-  grid-template-columns:1fr;
-}
-
-.footer-main {
-  grid-template-columns:1fr;
-}
-
-.nav-right .button {
-  display:none;
-}
-
-}
-
-/* Section-specific styles moved from HTML */
-.section-compact {
-  padding-top:0;
-}
-
-.intro-copy {
-  max-width:600px;
-  line-height:1.9;
-}
-
-.explore-link {
-  margin-top:15px;
-}
-
-.reviews-title {
-  margin-top:10px;
-}
-
- 
-/* LOGO DEL ENCABEZADO */
-
-.logo {
-    display: flex;
-    align-items: center;
     flex-shrink: 0;
-    text-decoration: none;
 }
 
 .logo-img {
     display: block;
-    width: 160px;
+    width: 180px;
+    height: 60px;
     max-width: 100%;
-    height: 55px;
     object-fit: contain;
 }
 
-/* LOGO EN CELULARES */
-
-@media (max-width: 768px) {
-    .logo-img {
-        width: 130px;
-        height: 45px;
-    }
+.field,
+.booking > * {
+    min-width: 0;
 }
 
-
-@media (min-width: 1024px) {
-    .hero h1 {
-        font-size: clamp(56px, 5vw, 86px);
-        line-height: 1.05;
-    }
-
-    .hero {
-        min-height: 600px;
-    }
+.booking input,
+.booking select,
+.booking button {
+    min-width: 0;
+    max-width: 100%;
 }
 
+.section-compact { padding-top: 0; }
+.intro-copy { max-width: 600px; line-height: 1.9; }
+.explore-link { margin-top: 15px; }
+.reviews-title { margin-top: 10px; }
 
-/* ==========================================
-   PUJ RENT A CAR - VERSIÓN MÓVIL
-========================================== */
+/* =========================================================
+   TABLET Y PANTALLAS MEDIANAS
+========================================================= */
 
-@media screen and (max-width: 768px) {
+@media (max-width: 1150px) {
+    .airport-mini { display: none; }
+    .nav-inner { gap: 14px; }
+    .links { gap: 18px; }
+    .fleet-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .split { grid-template-columns: minmax(0,1fr); }
+    .hero-car { width: 52vw; right: 0; }
+    .booking { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .booking > .booking-badges { grid-column: 1 / -1; }
+    .booking > button { grid-column: 1 / -1; }
+}
 
-    /* Evitar desplazamiento horizontal */
-    html,
-    body {
-        width: 100%;
-        overflow-x: clip;
+/* =========================================================
+   CELULARES: REGLAS ÚNICAS (SIN PARCHES SUPERPUESTOS)
+========================================================= */
+
+@media (max-width: 700px) {
+    html { overflow-x: clip; }
+    body { overflow-x: clip; }
+    .container { width: calc(100% - 36px); max-width: 100%; }
+
+    /* Cabecera */
+    .nav { height: 76px; }
+    .nav-inner { justify-content: space-between; gap: 10px; }
+    .logo { min-width: 0; flex-shrink: 1; }
+    .logo-img { width: 140px; height: 52px; }
+    .logo strong { font-size: 17px; }
+    .logo-mark { width: 36px; height: 36px; }
+    .mobile-menu { display: block; flex-shrink: 0; }
+    .nav-right { gap: 8px; margin-left: auto; }
+    .nav-right .lang { display: none; }
+    .nav-right .button { padding: 11px 12px; font-size: 12px; white-space: nowrap; }
+    .links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        background: white;
+        padding: 22px;
+        box-shadow: 0 15px 24px #1233;
     }
+    .links.open { display: flex; }
 
-    /* Contenedores */
-    .container {
-        width: 92%;
-        max-width: 100%;
-        margin: 0 auto;
-    }
-
-    /* Encabezado */
-    .logo-img {
-        width: 135px;
-        height: auto;
-        max-height: 55px;
-        object-fit: contain;
-    }
-
-    /* Portada */
+    /* Portada: contenido arriba, auto abajo */
     .hero {
-        position: relative;
-        min-height: 620px;
         height: auto;
-        padding: 65px 0 100px;
+        min-height: 730px;
+        padding: 0 0 245px;
         overflow: hidden;
+        background-position: center center;
     }
-
-    /* Texto principal */
+    .hero-content {
+        width: calc(100% - 36px);
+        padding-top: 46px;
+        padding-bottom: 0;
+    }
     .hero h1 {
-        font-size: clamp(34px, 9vw, 46px) !important;
-        line-height: 1.12 !important;
+        font-size: clamp(35px, 8.2vw, 48px);
+        line-height: 1.12;
         max-width: 100%;
-        margin-bottom: 18px;
+        margin: 14px 0;
+        overflow-wrap: normal;
     }
-
-    .hero p {
-        font-size: 16px !important;
-        line-height: 1.6;
-        max-width: 100%;
-    }
-
-    /* Beneficios */
-    .hero-features,
-    .hero-benefits {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 14px;
-        align-items: center;
-    }
-
-    /* Formulario */
-    .booking-card {
-        position: relative;
-        width: 92%;
-        max-width: 100%;
-        margin: -55px auto 35px;
-        padding: 20px;
-        border-radius: 18px;
-        z-index: 5;
-    }
-
-    .booking-card input,
-    .booking-card select,
-    .booking-card button {
-        width: 100%;
-        min-width: 0;
-        font-size: 15px;
-    }
-
-    /* Tarjetas de vehículos */
-    .fleet-grid {
-        grid-template-columns: 1fr !important;
-        gap: 22px;
-    }
-
-    .fleet-card img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-    }
-
-    /* Títulos de secciones */
-    h2 {
-        font-size: 29px;
-        line-height: 1.2;
-    }
-}
-
-
-
-@media (max-width: 768px) {
+    .hero p { font-size: 15px; line-height: 1.55; max-width: 100%; }
+    .hero-features { flex-wrap: wrap; gap: 12px 16px; margin-top: 22px; }
+    .hero-features div { gap: 6px; padding-right: 12px; font-size: 11px; }
+    .hero-features span { font-size: 21px; }
     .hero-car {
-        display: block !important;
-        position: relative;
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
-}
-
-
-/* ==========================================
-   CORRECCIÓN DE DESBORDAMIENTO MÓVIL
-========================================== */
-
-@media (max-width: 768px) {
-
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        overflow-x: hidden;
+        display: block;
+        position: absolute;
+        width: calc(100% - 36px);
+        max-width: 450px;
+        height: 212px;
+        right: 18px;
+        bottom: 48px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 13px;
+        filter: drop-shadow(0 12px 14px rgba(0,0,0,.15));
     }
 
-    *,
-    *::before,
-    *::after {
+    /* Reserva: cada campo en su propia fila */
+    .booking-wrap { margin-top: -30px; }
+    .booking {
+        display: grid;
+        grid-template-columns: minmax(0,1fr);
+        gap: 18px;
+        width: 100%;
+        padding: 20px;
+    }
+    .booking > * { grid-column: 1 / -1; width: auto; min-width: 0; }
+    .booking .field { min-width: 0; }
+    .field label { font-size: 12px; margin-bottom: 8px; }
+    .field input,
+    .field select {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: 49px;
+        font-size: 16px;
+        text-align: left;
         box-sizing: border-box;
     }
-
-    .container {
-        width: 100%;
-        max-width: 100%;
-        padding-left: 16px;
-        padding-right: 16px;
+    .field input[type="date"] { min-width: 0; padding: 0 10px; }
+    .booking button { width: 100%; height: 50px; }
+    .booking-badges {
+        display: grid;
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        gap: 12px;
+        font-size: 10px;
     }
 
-    .hero,
-    .booking-card,
-    .fleet-grid {
-        max-width: 100%;
-    }
-
-    .hero h1 {
-        font-size: clamp(32px, 9vw, 44px);
-        line-height: 1.12;
-    }
-
-    .booking-card input,
-    .booking-card select {
-        max-width: 100%;
-        min-width: 0;
-    }
-
-    .logo-img {
-        width: 130px;
-        height: auto;
-    }
+    /* Secciones internas */
+    .section { padding: 48px 0; }
+    .section-head { align-items: flex-start; gap: 15px; flex-wrap: wrap; }
+    .section h2 { font-size: 29px; }
+    .fleet-grid { grid-template-columns: minmax(0,1fr); gap: 18px; }
+    .car-photo { height: 210px; }
+    .car-details { padding: 15px; }
+    .benefits-grid { gap: 10px; }
+    .benefit { padding: 13px; flex-direction: column; }
+    .reviews-grid { grid-template-columns: minmax(0,1fr); }
+    .review p { min-height: 0; }
+    .cta-inner, .cta-right { flex-direction: column; align-items: flex-start; }
+    .cta h2 { font-size: 29px; }
+    .footer-main { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    .footer-bottom { flex-direction: column; gap: 10px; }
 }
 
-
-/* =====================================
-   ARREGLO DEFINITIVO DEL FORMULARIO
-   SOLO PARA CELULARES
-===================================== */
-
-@media screen and (max-width: 768px) {
-
-    .booking {
-        display: grid !important;
-        grid-template-columns: minmax(0, 1fr) !important;
-        gap: 20px !important;
-        padding: 20px !important;
-    }
-
-    .booking > * {
-        grid-column: 1 / -1 !important;
-        min-width: 0 !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    .booking input,
-    .booking select {
-        display: block;
-        width: 100% !important;
-        min-width: 0 !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Botón de reserva */
-    .booking button {
-        width: 100% !important;
-    }
+@media (max-width: 380px) {
+    .logo-img { width: 118px; }
+    .nav-right .button { padding: 9px; font-size: 11px; }
+    .hero { min-height: 755px; }
+    .hero h1 { font-size: 34px; }
+    .footer-main { grid-template-columns: 1fr; }
 }
 
