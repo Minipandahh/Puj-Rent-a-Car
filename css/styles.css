@@ -1205,3 +1205,41 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible {
         height: auto;
     }
 }
+
+
+/* =====================================
+   ARREGLO DEFINITIVO DEL FORMULARIO
+   SOLO PARA CELULARES
+===================================== */
+
+@media screen and (max-width: 768px) {
+
+    .booking {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 20px !important;
+        padding: 20px !important;
+    }
+
+    .booking > * {
+        grid-column: 1 / -1 !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .booking input,
+    .booking select {
+        display: block;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Botón de reserva */
+    .booking button {
+        width: 100% !important;
+    }
+}
+
